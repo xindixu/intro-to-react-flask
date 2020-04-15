@@ -33,7 +33,12 @@ A virtual environment allow you to create a isolated sandbox for each project yo
 
 5. Use our makefile to setup and run:
    In your terminal at the root, run `make setup`. You will see: "Setting up ..."
+  
+   This installs any dependencies within our project by running [pip install -r requirements] and [yarn install]
+  
    In your terminal at the root, run `make website`. You will see: "Running ...". It will start both the react and flask server and give you the port where they are served.
+
+   You may have some difficulties on Windows if you are running from Powershell. In this case, you have to write out the code or download a unix/linux terminal
 
 6. To install extra dependencies:
 JS (frontend): `yarn add [package-name]` or `yarn add <package_name> -D` to save as a dev-dependency
