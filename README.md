@@ -1,7 +1,5 @@
-# The World
+# Intro to React and Flask
 This is a project for CS 331E Software Engineering Class in University of Texas at Austin.
-
-This app uses Python Flask as backend, React as frontend, and postgreSQL as database.
 
 ## Setting it up!
 
@@ -31,22 +29,19 @@ This app uses Python Flask as backend, React as frontend, and postgreSQL as data
 4. (Optionally) Install virtual environments for python. [Guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 A virtual environment allow you to create a isolated sandbox for each project you are working on.
 
-5. Use our makefile to setup and run:
+1. Use our makefile to setup:
    In your terminal at the root, run `make setup`. You will see: "Setting up ..."
-   In your terminal at the root, run `make website`. You will see: "Running ...". It will start both the react and flask server and give you the port where they are served.
+   Wait for everything to be installed...
 
-6. To install extra dependencies:
+2. To install extra dependencies:
 JS (frontend): `yarn add [package-name]` or `yarn add <package_name> -D` to save as a dev-dependency
 Python (backend): `pip install [package-name]`
 
 ## Run!
-
-1. At this project root level, do `make website`. It will spin up the react and flask server. React is served on http://localhost:5000 and Flask is served on http://127.0.0.1:8080. These two windows should be open automatically. Give it a bit time to bundle and run. Also try refreshing if nothing showed up. 
+1. Create two terminal instances. At this project root level, do `make react` and `make flask` in different instances. It will spin up the react and flask server. React is served on http://localhost:3000 and Flask is served on http://127.0.0.1:5080. These two windows should be open automatically. Give it a bit time to bundle and run. Also try refreshing if nothing showed up. 
 
 2. Note that the makefile will not activate the virtualenv. So you'll have to manually activate that if you plan on using it.
 
-3. The React app will be build with `yarn run build` and it need to be placed under `flask-backend/static/react`. The output `index.html` should be placed in `flask-backend/template`
+3. When you commit your changes, DO NOT, commit react build files (i.e. `flask-backend/static/react` directory).
 
-4. When you commit your changes, DO NOT, commit react build files (i.e. `flask-backend/static/react` directory).
-
-5. To link React with Flask, do `make deploy`. Then refresh the Flask webpage, React should link with Flask.
+4. To link React with Flask, do `make deploy`. Then refresh the Flask webpage, React should link with Flask.
