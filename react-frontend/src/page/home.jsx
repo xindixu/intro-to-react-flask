@@ -1,10 +1,10 @@
 import React from "react";
-
-const Home = () => {
-  return (
-    <div> Home Page
-    </div>
-  );
-};
+import austinPic from '../assets/austin.jpg'
+const Home = () => (
+    <>
+        <h1> Home Page</h1>
+        <img src={austinPic} alt="austin"/>
+    </>
+)
 
 export default Home;
