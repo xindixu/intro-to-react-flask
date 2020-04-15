@@ -1,5 +1,4 @@
 import React from "react";
-import "./cities.css";
 import Cities from "../containers/cities";
 
 const CitiesPage = () => (
