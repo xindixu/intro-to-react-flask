@@ -7,6 +7,7 @@ const ApiProfile = () => {
   const [interest, setInterests] = useState("")
   const [userId, setUserId] = useState("")
 
+  // 1. pull data from the backend. Look into apiFetch implementation for detail
   useEffect(() => {
     apiFetch('/profile', {})
       .then(({ age, interests, name, userId }) => {
@@ -24,9 +25,9 @@ const ApiProfile = () => {
       interest,
       userId
     }
-    console.log(newProfile)
+    console.log('Payload:' ,newProfile)
     apiFetch('/profile', { method: 'POST', body: newProfile })
-      .then((resp) => { console.log(resp) })
+      .then((resp) => { console.log('Updated Profile from the server:', resp) })
   }
 
   return (
