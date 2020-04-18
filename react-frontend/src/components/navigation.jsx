@@ -12,6 +12,7 @@ import Home from "../page/home";
 import NotFound from "../page/not-found";
 import About from "../page/about";
 import Profile from "../page/profile";
+import Posts from "../page/posts";
 
 const AppNavBar = () => {
   const location = useLocation();
@@ -28,6 +29,9 @@ const AppNavBar = () => {
         <Nav.Link eventKey="/profile" as={Link} to="/profile">
           Profile
         </Nav.Link>
+        <Nav.Link eventKey="/posts" as={Link} to="/posts">
+          Posts
+        </Nav.Link>
       </Nav>
     </Navbar>
   );
@@ -37,6 +41,9 @@ const Navigation = () => (
   <Router>
     <AppNavBar />
     <Switch>
+      <Route path="/posts">
+        <Posts />
+      </Route>
       <Route path="/profile">
         <Profile />
       </Route>
