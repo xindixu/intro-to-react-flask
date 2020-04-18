@@ -12,6 +12,7 @@ import Home from "../page/home";
 import NotFound from "../page/not-found";
 import About from "../page/about";
 import Profile from "../page/profile";
+import ApiProfile from "../page/api-profile";
 import Posts from "../page/posts";
 import Post from "../page/post";
 
@@ -30,6 +31,9 @@ const AppNavBar = () => {
         <Nav.Link eventKey="/profile" as={Link} to="/profile">
           Profile
         </Nav.Link>
+        <Nav.Link eventKey="/api-profile" as={Link} to="/api-profile">
+          Api Profile
+        </Nav.Link>
         <Nav.Link eventKey="/posts" as={Link} to="/posts">
           Posts
         </Nav.Link>
@@ -42,6 +46,9 @@ const Navigation = () => (
   <Router>
     <AppNavBar />
     <Switch>
+      <Route path="/api-profile">
+        <ApiProfile />
+      </Route>
       <Route path="/post/:id">
         <Post />
       </Route>
