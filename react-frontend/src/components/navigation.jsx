@@ -11,6 +11,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import Home from "../page/home";
 import NotFound from "../page/not-found";
 import About from "../page/about";
+import Profile from "../page/profile";
 
 const AppNavBar = () => {
   const location = useLocation();
@@ -24,6 +25,9 @@ const AppNavBar = () => {
         <Nav.Link eventKey="/about" as={Link} to="/about">
           About
         </Nav.Link>
+        <Nav.Link eventKey="/profile" as={Link} to="/profile">
+          Profile
+        </Nav.Link>
       </Nav>
     </Navbar>
   );
@@ -33,6 +37,9 @@ const Navigation = () => (
   <Router>
     <AppNavBar />
     <Switch>
+      <Route path="/profile">
+        <Profile />
+      </Route>
       <Route path="/about">
         <About />
       </Route>
