@@ -9,10 +9,10 @@ const Profile = () => {
             <p>My age: {age}</p>
             <button role="button" onClick={() => setAge(age + 1)}>Add Age</button>
             <button role="button" onClick={() => setAge(age - 1)}>Minus Age</button>
-            <br/>
+            <br />
             <p>{name}</p>
             <label htmlFor="name">Update</label>
-            <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
+            <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
         </>
     )
 }

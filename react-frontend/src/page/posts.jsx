@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import Card from '../components/card'
 
 const Posts = props => {
   const [posts, setPosts] = useState([])
@@ -22,7 +22,7 @@ const Posts = props => {
       {/* 1. let's show a list of posts */}
       {/* {posts.length ? posts.map(({ id, title }) => <li key={id}>{title}</li>) : null} */}
       {/* 2. use custom component to render posts nicely */}
-      {posts.length ? posts.map(({ id, title }) => <li key={id}>{title}</li>) : null}
+      {posts.length ? posts.map((post) => <Card key={post.id} {...post} />) : null}
     </ul>
   )
 }

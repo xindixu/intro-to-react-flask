@@ -13,6 +13,7 @@ import NotFound from "../page/not-found";
 import About from "../page/about";
 import Profile from "../page/profile";
 import Posts from "../page/posts";
+import Post from "../page/post";
 
 const AppNavBar = () => {
   const location = useLocation();
@@ -41,6 +42,9 @@ const Navigation = () => (
   <Router>
     <AppNavBar />
     <Switch>
+      <Route path="/post/:id">
+        <Post />
+      </Route>
       <Route path="/posts">
         <Posts />
       </Route>
