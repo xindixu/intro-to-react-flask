@@ -4,6 +4,8 @@ import requests
 import json
 import os
 
+app = Flask(__name__)
+
 CORS(app, resources=r'/*')
 
 @app.route('/api', methods=['GET'])
