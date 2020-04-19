@@ -20,6 +20,7 @@ casper_profile = {
 def update_profile(new_profile):
     casper_profile = new_profile
 
+# This will be our API route 
 @app.route('/api/profile', methods=['GET', 'POST'])
 def profile():
     if request.method == 'GET':
@@ -32,11 +33,14 @@ def profile():
 
 @app.route('/')
 def index():
+    # Does this look familiar. 
+    # What is index.html
     return render_template("index.html")
 
 
 @app.route('/<path:path>')
 def catch_all(path):
+    # Any path directs to index.html
     return render_template("index.html")
 
 
