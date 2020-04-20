@@ -37,7 +37,7 @@ def index():
     # What is index.html
     return render_template("index.html")
 
-
+# Uncomment this, you will see an ugly 404 page
 @app.route('/<path:path>')
 def catch_all(path):
     # Any path directs to index.html

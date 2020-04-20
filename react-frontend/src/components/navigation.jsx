@@ -25,6 +25,7 @@ const AppNavBar = () => {
         <Nav.Link eventKey="/" as={Link} to="/">
           Home
         </Nav.Link>
+        {/* 1. Click here. Should give you a 404 page*/}
         <Nav.Link eventKey="/about" as={Link} to="/about">
           About
         </Nav.Link>
@@ -58,12 +59,14 @@ const Navigation = () => (
       <Route path="/profile">
         <Profile />
       </Route>
-      <Route path="/about">
+      {/* 2. Uncomment the code and revisit about page, it is working!*/}
+      {/* <Route path="/about">
         <About />
-      </Route>
+      </Route> */}
       <Route exact path="/">
         <Home />
       </Route>
+      {/* Any not matched routes will render this component */}
       <Route>
         <NotFound />
       </Route>
