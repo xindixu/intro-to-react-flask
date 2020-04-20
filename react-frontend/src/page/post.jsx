@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 const Post = () => {
   const { id } = useParams()
@@ -42,8 +42,10 @@ const Post = () => {
     const { title, body } = post
     return (
       <>
-        <h1>{title}</h1>
+        <h1>{title} (Post {id})</h1>
         <p>{body}</p>
+        {/* next post button */}
+        <Link to={`/post/${parseInt(id, 10) + 1}`}>Next</Link>
       </>)
   }
 
