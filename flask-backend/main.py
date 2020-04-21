@@ -34,7 +34,7 @@ def profile():
 @app.route('/')
 def index():
     # Does this look familiar. 
-    # What is index.html
+    # 1) To templates/index.html
     return render_template("index.html")
 
 # Uncomment this, you will see an ugly 404 page
