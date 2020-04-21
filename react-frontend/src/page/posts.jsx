@@ -27,5 +27,12 @@ const Posts = props => {
   )
 }
 
+{/*
+The <Card> tag is the component from before, but multiple instances are being created in line 25,
+but each instance has data from a different post.
+
+Go to the posts page on the website to see how all the posts show on the page.
+
+*/}
 
 export default Posts

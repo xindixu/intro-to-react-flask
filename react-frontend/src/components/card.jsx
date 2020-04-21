@@ -13,6 +13,15 @@ const PostCard = ({userId, id, title, body}) => {
   )
 }
 
+{/*
+const PostCard is the contructor function of the 
+Card component. It shows that 4 props are inputted:
+userID, id, title, and body.
+
+Go To posts.jsx next
+
+*/}
+
 PostCard.propTypes = {
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
