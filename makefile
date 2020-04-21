@@ -21,6 +21,7 @@ setup: ;@echo "Setting up ${PROJECT}.....";
 
 deploy: ;@echo "Building ${PROJECT}....."; 
 	# For deployment, we will need to place the react project to the backend
+	# Go to ./flask-backend/templates/index.html
 	cd react-frontend && yarn install && yarn build 
 	cp -a react-frontend/build/. flask-backend/static/react
 	cp -a flask-backend/static/react/index.html flask-backend/templates/index.html 
